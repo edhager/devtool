@@ -37,6 +37,7 @@
     "img",
     "devtools.html",
     "devtools.js",
+    "contentScript.js",
     "LICENSE",
     "manifest.json",
     "README.md"
@@ -44,7 +45,7 @@
   "devDependencies": {
     "@dojo/cli-build-app": "file:deps/dojo-cli-build-app-0.1.0-rc.1.tgz",
     "@dojo/cli-test-intern": "^0.2.1",
-    "@dojo/core": "~0.2.1",
+    "@dojo/core": "~0.3.0",
     "@dojo/diagnostics": "file:deps/dojo-diagnostics-0.1.0-rc.1.tgz",
     "@dojo/has": "~0.1.1",
     "@dojo/i18n": "~0.2.0",

@@ -8,6 +8,10 @@ import StateInjector from './state/StateInjector';
 import theme from './themes/devtool';
 import DevToolContainer from './containers/DevToolContainer';
 
+declare const browser: typeof chrome;
+const b: typeof chrome = ((typeof browser !== 'undefined' && browser) ||
+	(typeof chrome !== 'undefined' && chrome)) as any;
+
 const registry = new Registry();
 
 const store = new Store();
@@ -30,4 +34,12 @@ async function onCheckVersion() {
 (async () => {
 	await onCheckVersion();
 	projector.append();
+
+	b.runtime.onMessage.addListener(function(message: any) {
+		if (message.refresh) {
+			console.log('Refresh here!');
+
+			// TODO - Refresh the contents of the devtool panel
+		}
+	});
 })();

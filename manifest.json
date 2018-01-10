@@ -9,6 +9,12 @@
 		"default_icon": "img/logo/38x38.png",
 		"default_title": "Dojo 2 DevTools"
 	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*"],
+			"js": ["contentScript.js"]
+		}
+	],
 	"devtools_page": "devtools.html",
 	"icons": {
 		"16": "img/logo/16x16.png",
@@ -17,6 +23,7 @@
 		"128": "img/logo/128x128.png"
 	},
 	"permissions": [
+		"notifications",
 		"tabs",
 		"<all_urls>"
 	],

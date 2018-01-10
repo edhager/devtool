@@ -1,6 +1,6 @@
 'use strict';
 
-const b = typeof browser !== 'undefined' && browser || typeof chrome !== 'undefined' && chrome;
+const b = (typeof browser !== 'undefined' && browser) || (typeof chrome !== 'undefined' && chrome);
 if (!b || !b.devtools) {
 	throw new Error('Unable to resolve development tools API, unsupported environment!');
 }
